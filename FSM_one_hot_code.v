@@ -4,7 +4,7 @@
 //SW0 toggle swithc on the DE1-SoC board acts as an active-low synchronous resent input and the SW1 toggle acts as the w input. KEY0 
 //acts as the clock input. The LEDRs 0-8 represent the output of the state flipflops and LEDR9 represents the state of the z output.
 
-module lab6part1b(SW,KEY,LEDR);
+module FSM(SW,KEY,LEDR);
 	//initialization of inputs, outputs, and variables
 	input [1:0] SW;
 	input [0:0] KEY;
