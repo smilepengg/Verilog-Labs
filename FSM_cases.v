@@ -44,7 +44,7 @@ module lab6part2(SW, KEY, LEDR);
 				else Y=I;
 			I: if (!w) Y=B;
 				else Y=I;
-			default: Y=4'bxxxx; 
+			default: Y=4'bxxxx; //"don't care" cases
 		endcase
 	end
 	
