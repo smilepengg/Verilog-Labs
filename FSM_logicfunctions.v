@@ -1,7 +1,7 @@
 //Verilog program which implements a finite state machine (FSM) that recognizes the sequence of 0000 or 1111 (overlapping sequences are
 //allowed). The input is w and the output is z. When w=0 or w=1 for 4 consecutive clock pulses, the value of z=1 otherwise the value of 
 //z=0. This particular FSM program is done by implementing logic functions (derived from state tables) instead of using cases.
-//SW0 toggle swithc on the DE1-SoC board acts as an active-low synchronous resent input and the SW1 toggle acts as the w input. KEY0 
+//SW0 toggle swithc on the DE1-SoC board acts as an active-low synchronous reset input and the SW1 toggle acts as the w input. KEY0 
 //acts as the clock input. The LEDRs 0-8 represent the output of the state flipflops and LEDR9 represents the state of the z output.
 
 
