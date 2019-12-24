@@ -5,7 +5,7 @@
 //acts as the clock input. The LEDRs 0-8 represent the output of the state flipflops and LEDR9 represents the state of the z output.
 
 
-module lab6part1(SW,KEY,LEDR);
+module FSM(SW,KEY,LEDR);
 	//initialization of inputs, outputs, and variables
 	input [1:0] SW;
 	input [0:0] KEY;
@@ -50,16 +50,18 @@ module lab6part1(SW,KEY,LEDR);
 	assign LEDR[8:0]=Y[8:0];
 endmodule
 	
-//D flip flop module
+//D flip flop module with active-low synchronous reset
 module d_ff(D, clock, Q, resetn);
 	input D, clock, resetn;
 	output reg Q;
 	always @(posedge clock)
 	begin
+		//check if it is a reset case
 		if (resetn==1'b0)
 		begin
 			Q<=1'b0;
 		end
+		//otherwise, the data is passed onto the D flip flop
 		else
 		begin
 			Q<=D;
